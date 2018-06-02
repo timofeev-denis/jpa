@@ -29,6 +29,7 @@ public class Employee {
     @Column(name = "salary")
     private Long salary;
 
-    @OneToMany(mappedBy = "owner")
+    @OneToMany
+    @JoinColumn(name = "owner_id")
     private List<Phone> phones;
 }

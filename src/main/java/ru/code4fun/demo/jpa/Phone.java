@@ -24,8 +24,4 @@ public class Phone {
     @Column(name = "model")
     private String model;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner_id")
-    private Employee owner;
-
 }
