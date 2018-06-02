@@ -2,13 +2,12 @@ package ru.code4fun.demo.jpa.web.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import ru.code4fun.demo.jpa.domain.Employee;
 import ru.code4fun.demo.jpa.repository.EmployeeRepository;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/test")
 public class EmployeeController {
 
     private final EmployeeRepository employeeRepository;
@@ -18,8 +17,13 @@ public class EmployeeController {
         this.employeeRepository = employeeRepository;
     }
 
-    @GetMapping("/test")
+    @GetMapping("/")
     public ResponseEntity findAllEmployees() {
         return ResponseEntity.ok(employeeRepository.findAll());
+    }
+
+    @PostMapping("/")
+    public ResponseEntity<Employee> create(@RequestBody Employee employee) {
+        return ResponseEntity.ok(employeeRepository.save(employee));
     }
 }
