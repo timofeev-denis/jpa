@@ -1,4 +1,4 @@
-package ru.code4fun.demo.jpa;
+package ru.code4fun.demo.jpa.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

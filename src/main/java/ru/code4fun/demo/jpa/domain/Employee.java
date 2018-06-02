@@ -1,10 +1,9 @@
-package ru.code4fun.demo.jpa;
+package ru.code4fun.demo.jpa.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.code4fun.demo.jpa.Phone;
 
 import javax.persistence.*;
 import java.util.List;

@@ -1,10 +1,11 @@
-package ru.code4fun.demo.jpa;
+package ru.code4fun.demo.jpa.web.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.code4fun.demo.jpa.repository.EmployeeRepository;
 
 @RestController
 @RequestMapping("/")
